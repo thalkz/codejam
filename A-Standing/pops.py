@@ -5,18 +5,18 @@ for i in xrange(1, t + 1):
     count = 0
     friends = 0
 
-    print ""
-    print "------"
-    print "{}, {}".format(Smax, friends)
+    #print ""
+    #print "------"
+    #print "{}, {}".format(Smax, audience)
 
     for j in range(0, len(audience)):
         
         num = int(audience[j])
         count += num
 
-        if (count < (j + 1)):
-            friends += (j + 1) - count
-            print "Added to friends : " + str((j + 1) - count)
+        if (count + friends < (j + 1)):
+            friends += (j + 1) - (count + friends)
+            #print "Added to friends : " + str((j + 1) - (count + friends))
     
     print "Case #{}: {}".format(i, friends)
     
